@@ -3,13 +3,12 @@ set -u
 
 
 DB=$1
-
-TIMESTAMP=`date +%F-%H%M`
-BACKUP_NAME="$DB-$TIMESTAMP"
-MONGODUMP_PATH="/usr/bin/mongodump"
+FILENAME=$2
 
 # Create the Dump directory if it does not exist
 cd ~
-mkdir -p DUMP
-cd DUMP
-$MONGODUMP_PATH --db $DB --out BACKUP_NAME
+mkdir -p mongodump
+cd mongodump
+mongodump --db $DB --out $FILENAME
+cd ..
+echo "Dumped DB!"
