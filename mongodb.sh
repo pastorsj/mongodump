@@ -7,8 +7,8 @@ FILENAME=$2
 
 # Create the Dump directory if it does not exist
 cd ~
-mkdir -p mongodump
-cd mongodump
+mkdir -p MONGO_DUMP
+cd MONGO_DUMP
 mongodump --db $DB --out $FILENAME
 cd ..
 echo "Dumped DB!"
