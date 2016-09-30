@@ -1,6 +1,15 @@
 # mongodump
 A simple script execute a cron job to dump your localhost mongodb
 
+## Required
+config.json
+``` json
+{
+    "db": "DB_NAME",
+    "hour": 3 (default),
+    "minute": 0 (default)
+}
+```
 
 Make it executable:
 
